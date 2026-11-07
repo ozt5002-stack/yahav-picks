@@ -1,0 +1,280 @@
+{
+ "note": "Snapshot of the Airtable table on 2026-11-07, for local preview builds only.",
+ "records": [
+  {
+   "id": "fixture1",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "גומיית התנגדות",
+    "fldyLtURMuIeDAkWU": 1,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c4nSAnOV",
+    "fldUkxxIxReruyjhs": "כושר ואימונים",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture2",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "משקולות קרסול",
+    "fldyLtURMuIeDAkWU": 2,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c3aavRmz",
+    "fldUkxxIxReruyjhs": "כושר ואימונים",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture3",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "מקרן לסרט",
+    "fldyLtURMuIeDAkWU": 3,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c4O1sq1n",
+    "fldUkxxIxReruyjhs": "לייף סטייל ובית",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture4",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "בגדים לליהיא",
+    "fldyLtURMuIeDAkWU": 4,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "אימהות ותינוקות",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture5",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "בקבוק סטנלי",
+    "fldyLtURMuIeDAkWU": 5,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "לייף סטייל ובית",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture6",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "ספריצר לשמן למטבח",
+    "fldyLtURMuIeDAkWU": 6,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c3pfi5hT",
+    "fldUkxxIxReruyjhs": "תזונה ומטבח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture7",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "כדור פיזיו לאימון",
+    "fldyLtURMuIeDAkWU": 7,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c3KmKxBX",
+    "fldUkxxIxReruyjhs": "כושר ואימונים",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture8",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "בלוק",
+    "fldyLtURMuIeDAkWU": 8,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c2R98hI9",
+    "fldUkxxIxReruyjhs": "כושר ואימונים",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture9",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "מסאז׳ אימון",
+    "fldyLtURMuIeDAkWU": 9,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "כושר ואימונים",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture10",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "כוסות לקפה",
+    "fldyLtURMuIeDAkWU": 10,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c3TD1Rgp",
+    "fldUkxxIxReruyjhs": "תזונה ומטבח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture11",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "כובע שחור",
+    "fldyLtURMuIeDAkWU": 11,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c34O93Kd",
+    "fldUkxxIxReruyjhs": "אופנה וטיפוח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture12",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "כובע חום",
+    "fldyLtURMuIeDAkWU": 12,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c3xfdx9L",
+    "fldUkxxIxReruyjhs": "אופנה וטיפוח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture13",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "מעמד לצילום לפלאפון",
+    "fldyLtURMuIeDAkWU": 13,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "גאדג'טים ליוצרות תוכן",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture14",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "מגן לפלאפון",
+    "fldyLtURMuIeDAkWU": 14,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "שונות",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture15",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "נעליים",
+    "fldyLtURMuIeDAkWU": 15,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "אופנה וטיפוח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture16",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "טפט למחשב / לקיר בחדר",
+    "fldyLtURMuIeDAkWU": 16,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "לייף סטייל ובית",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture17",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "קופסת תכשיטים",
+    "fldyLtURMuIeDAkWU": 17,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "אופנה וטיפוח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture18",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "מיקרופון לסרטון",
+    "fldyLtURMuIeDAkWU": 18,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c2wNsVKd",
+    "fldUkxxIxReruyjhs": "גאדג'טים ליוצרות תוכן",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture19",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "קערה ליוגורט",
+    "fldyLtURMuIeDAkWU": 19,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldXxwbp2jzFw7MFJ": "https://s.click.aliexpress.com/e/_c3gSpeaD",
+    "fldUkxxIxReruyjhs": "תזונה ומטבח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture20",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "בלונים ליומולדת",
+    "fldyLtURMuIeDAkWU": 20,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "שונות",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture21",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "תאורה לחדר של ליהיא",
+    "fldyLtURMuIeDAkWU": 21,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "אימהות ותינוקות",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture22",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "כוס לקפה קר",
+    "fldyLtURMuIeDAkWU": 22,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "תזונה ומטבח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture23",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "שרשרת",
+    "fldyLtURMuIeDAkWU": 23,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "אופנה וטיפוח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  },
+  {
+   "id": "fixture24",
+   "createdTime": "2026-11-07T20:06:09.000Z",
+   "fields": {
+    "fldsRuFXNOSlGssLI": "בייביליס לפאה",
+    "fldyLtURMuIeDAkWU": 24,
+    "fldFVBf1YtHZx4lsk": "טיוטה",
+    "fldUkxxIxReruyjhs": "אופנה וטיפוח",
+    "fld6bQz75fSneOXft": "2026-11-07T20:06:09.000Z"
+   }
+  }
+ ]
+}

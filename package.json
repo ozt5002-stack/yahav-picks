@@ -1,0 +1,13 @@
+{
+  "name": "yahav-picks",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node build/build.mjs",
+    "preview": "node build/build.mjs --fixture data/fixture.json --drafts"
+  },
+  "dependencies": {
+    "sharp": "0.33.5"
+  }
+}

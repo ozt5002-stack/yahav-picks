@@ -1,0 +1,99 @@
+# Rebuilds the site from Airtable and publishes it to GitHub Pages.
+# - Every hour: checks Airtable, publishes only if something visible changed.
+# - "Run workflow" button (Actions tab) or a push to main: always publishes.
+name: Site
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.decide.outputs.deploy }}
+      hash: ${{ steps.build.outputs.hash }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Restore photo cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: photos-${{ github.run_id }}
+          restore-keys: photos-
+
+      - name: Build
+        id: build
+        env:
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          if [ -z "$AIRTABLE_TOKEN" ]; then
+            echo "::warning::AIRTABLE_TOKEN secret is not set yet, skipping."
+            exit 0
+          fi
+          npm run build
+
+      - name: Decide whether to publish
+        id: decide
+        run: |
+          new="${{ steps.build.outputs.hash }}"
+          old="$(cat data/last-hash.txt 2>/dev/null || true)"
+          if [ -z "$new" ]; then
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" != "schedule" ] || [ "$new" != "$old" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No changes in Airtable."
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - if: steps.decide.outputs.deploy == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
+      - id: pages
+        uses: actions/deploy-pages@v4
+
+      # Remember what was published. The commit also keeps the repo active,
+      # so GitHub does not pause the hourly schedule after 60 quiet days.
+      - uses: actions/checkout@v4
+      - name: Save data fingerprint
+        run: |
+          mkdir -p data
+          echo "${{ needs.build.outputs.hash }}" > data/last-hash.txt
+          if git diff --quiet -- data/last-hash.txt; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/last-hash.txt
+          git commit -m "Record published data fingerprint"
+          git push
