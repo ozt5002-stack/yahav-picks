@@ -56,7 +56,7 @@
     if (state.cat) p.set('c', state.cat);
     if (state.q) p.set('q', state.q);
     var qs = p.toString();
-    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+    try { history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '')); } catch (e) { /* embedded previews */ }
   }
 
   chips.forEach(function (c) {
