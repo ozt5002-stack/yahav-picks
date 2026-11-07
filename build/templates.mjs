@@ -162,6 +162,7 @@ export function indexPage(products, ctx) {
   <div class="grid" id="grid">
 ${products.map(card).join('\n')}
   </div>
+  ${products.length ? '' : '<p class="empty">ההמלצות הראשונות בדרך. בינתיים אפשר לעקוב אחריי <a href="' + INSTAGRAM + '">באינסטגרם</a>.</p>'}
   <p class="empty" id="empty" hidden>לא מצאתי מוצר כזה. נסי מילה אחרת, או <button type="button" class="linkish" id="reset">הציגי את כל ההמלצות</button>.</p>
 </main>`;
   return page({

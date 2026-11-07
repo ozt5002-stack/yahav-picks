@@ -13,7 +13,7 @@
   });
 
   var grid = document.getElementById('grid');
-  if (!grid) return;
+  if (!grid || !grid.querySelector('.card')) return;
 
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
   var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
