@@ -16,7 +16,7 @@ build/build.mjs  → downloads + compresses photos (sharp, cached in .cache/)
 GitHub Pages
 ```
 
-- Only rows with status **מפורסם** and a name, link, photo, short review and category go live.
+- Only rows with status **מפורסם** and a name, link, photo and category go live (the short review is optional).
   Published rows with something missing are skipped and listed in the Action log.
 - Airtable photo URLs expire, so photos are never hot-linked.
 - "New" badge (14 days) is computed in the browser, no rebuild needed.

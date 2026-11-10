@@ -59,12 +59,12 @@ export function toProduct(record) {
 }
 
 // What a product needs before it may appear on the live site.
+// The review is optional (Oz's decision, Nov 2026): without one the card simply has no quote.
 export function missingFields(p) {
   const missing = [];
   if (!p.name) missing.push('שם');
   if (!p.link) missing.push('קישור');
   if (!p.photo) missing.push('תמונה');
-  if (!p.review) missing.push('ביקורת');
   if (!p.category) missing.push('קטגוריה');
   return missing;
 }
