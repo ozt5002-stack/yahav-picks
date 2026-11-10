@@ -147,7 +147,7 @@ h1, h2, h3 { text-wrap: balance; }
 .card-title a::after { content: ""; }
 .card-title a:hover { text-decoration: underline; }
 .quote {
-  position: relative; margin: 0; font-size: 14px; line-height: 1.45;
+  position: relative; margin: 0; font-size: 14px; line-height: 1.45; white-space: pre-line;
   background: var(--white); border-radius: 12px; padding: 8px 10px;
   display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
 }
@@ -190,7 +190,7 @@ h1, h2, h3 { text-wrap: balance; }
 .product h1 { margin: 0; font-weight: 800; font-size: clamp(28px, 6vw, 38px); line-height: 1.1; color: var(--bordeaux-deep); }
 .review { margin: 0; background: var(--cream); border-radius: var(--radius); padding: 16px 18px; }
 .review blockquote { margin: 0; }
-.review p { margin: 0; font-size: 18px; }
+.review p { margin: 0; font-size: 18px; white-space: pre-line; }
 .review figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); }
 .review figcaption::before { content: "– "; }
 .rating { margin: 0; display: flex; gap: 2px; }
