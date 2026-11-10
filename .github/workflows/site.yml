@@ -1,12 +1,19 @@
 # Rebuilds the site from Airtable and publishes it to GitHub Pages.
 # - Every hour: checks Airtable, publishes only if something visible changed.
 # - "Run workflow" button (Actions tab) or a push to main: always publishes.
+# - An outside pinger can call workflow_dispatch with force=false to check more often
+#   than GitHub's schedule, which can lag by hours.
 name: Site
 
 on:
   schedule:
     - cron: '17 * * * *'
   workflow_dispatch:
+    inputs:
+      force:
+        description: Publish even if nothing changed in Airtable
+        type: boolean
+        default: true
   push:
     branches: [main]
 
@@ -61,7 +68,7 @@ jobs:
           old="$(cat data/last-hash.txt 2>/dev/null || true)"
           if [ -z "$new" ]; then
             echo "deploy=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" != "schedule" ] || [ "$new" != "$old" ]; then
+          elif [ "${{ github.event_name }}" = "push" ] || [ "${{ inputs.force }}" = "true" ] || [ "$new" != "$old" ]; then
             echo "deploy=true" >> "$GITHUB_OUTPUT"
           else
             echo "No changes in Airtable."

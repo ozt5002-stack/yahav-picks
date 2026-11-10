@@ -41,6 +41,8 @@ const records = await loadRecords({ fixture: args.fixture });
 const all = records.map(toProduct).filter((p) => p.name && p.code);
 for (const p of all) p.missing = missingFields(p);
 
+console.log(`airtable: ${records.length} rows, ${all.filter((p) => p.published).length} marked published`);
+
 let products = all.filter((p) => preview || p.published);
 for (const p of products.filter((x) => x.published && x.missing.length)) {
   console.warn(`skip #${p.code} ${p.name}: missing ${p.missing.join(', ')}`);

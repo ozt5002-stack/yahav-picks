@@ -32,7 +32,10 @@ const text = (v) => (typeof v === 'string' ? v.trim() : '');
 export function toProduct(record) {
   const f = record.fields;
   const F = AIRTABLE.fields;
-  const att = Array.isArray(f[F.photo]) ? f[F.photo][0] : null;
+  // First image attachment; videos and other files in the same field are ignored.
+  const att = Array.isArray(f[F.photo])
+    ? f[F.photo].find((a) => (a.type || '').startsWith('image/')) || null
+    : null;
   return {
     id: record.id,
     code: f[F.code],
