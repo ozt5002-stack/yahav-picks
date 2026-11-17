@@ -1,7 +1,11 @@
 import {
-  SITE_URL, BASE, SITE_NAME, OWNER, OWNER_TITLE, MAIN_SITE, INSTAGRAM,
+  SITE_URL, BASE, SITE_NAME, OWNER, OWNER_TITLE, MAIN_SITE, INSTAGRAM, YOUTUBE, LINKS_PAGE,
   WHATSAPP_DISPLAY, WHATSAPP_NUMBER, BUILDER_WHATSAPP, CATEGORIES,
 } from './config.mjs';
+
+// Same wordmark as fit-balance.co.il: "Fit" in ink, "Balance" in the accent color.
+const LOGO = 'Fit <span>Balance</span>';
+const WA_TEXT = encodeURIComponent('היי יהב, הגעתי מאתר ההמלצות');
 
 export const esc = (s) => String(s ?? '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -67,12 +71,15 @@ function footer() {
   <div class="wrap footer-inner">
     <p class="footer-disc">${esc(DISCLOSURE_FULL)}</p>
     <p>ההמלצות כאן הן דעה אישית מהניסיון שלי, ואינן ייעוץ מקצועי או רפואי. המחירים והזמינות נקבעים באתר AliExpress ועשויים להשתנות.</p>
+    <a class="logo" href="${MAIN_SITE}">${LOGO}</a>
     <nav class="footer-links" aria-label="קישורים">
-      <a href="${MAIN_SITE}">Fit Balance</a>
+      <a href="${MAIN_SITE}">האתר הראשי</a>
       <a href="${INSTAGRAM}">אינסטגרם</a>
-      <a href="${href('privacy/')}">מדיניות פרטיות</a>
-      <a href="${href('accessibility/')}">הצהרת נגישות</a>
+      <a href="${YOUTUBE}">יוטיוב</a>
+      <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${WA_TEXT}">וואטסאפ</a>
+      <a href="${LINKS_PAGE}">כל הקישורים</a>
     </nav>
+    <p class="footer-links"><a href="${href('privacy/')}">מדיניות פרטיות</a> · <a href="${href('accessibility/')}">הצהרת נגישות</a></p>
     <p class="credit">האתר נבנה ע״י <a href="https://wa.me/${BUILDER_WHATSAPP}">עוז טרבלסי</a></p>
   </div>
 </footer>`;
@@ -81,7 +88,7 @@ function footer() {
 function topBar() {
   return `<header class="topbar">
   <div class="wrap topbar-inner">
-    <a class="brand" href="${href()}">${esc(SITE_NAME)}</a>
+    <a class="brand" href="${href()}"><span class="logo">${LOGO}</span><span class="brand-sub">ההמלצות</span></a>
     <a class="back" href="${href()}">לכל ההמלצות<svg class="ico" aria-hidden="true"><use href="#i-back"/></svg></a>
   </div>
 </header>`;
@@ -142,7 +149,7 @@ export function indexPage(products, ctx) {
     .join('');
   const body = `<header class="hero">
   <div class="wrap hero-inner">
-    <div class="hero-top"><a class="brand" href="${MAIN_SITE}">Fit Balance</a><span>${esc(SITE_NAME)}</span></div>
+    <div class="hero-top"><a class="logo" href="${MAIN_SITE}">${LOGO}</a><span>${esc(SITE_NAME)}</span></div>
     <div class="me">
       <img src="${href(ctx.portrait)}" alt="${esc(OWNER)}" width="120" height="120">
       <div><h1>קניתי. ניסיתי. ממליצה.</h1><p class="me-sub">${esc(OWNER)}, ${esc(OWNER_TITLE)}</p></div>
@@ -164,6 +171,14 @@ ${products.map(card).join('\n')}
   </div>
   ${products.length ? '' : '<p class="empty">ההמלצות הראשונות בדרך. בינתיים אפשר לעקוב אחריי <a href="' + INSTAGRAM + '">באינסטגרם</a>.</p>'}
   <p class="empty" id="empty" hidden>לא מצאתי מוצר כזה. נסי מילה אחרת, או <button type="button" class="linkish" id="reset">הציגי את כל ההמלצות</button>.</p>
+  <section class="promo" aria-labelledby="promo-title">
+    <h2 id="promo-title">מעבר להמלצות</h2>
+    <p>אני מלווה נשים בכושר, בהרגלי תזונה ובאכילה רגשית, פרונטלית בשדרות ואונליין מכל הארץ. יש לי גם שני ספרי מתכונים: מתוק לי באיזון ומטבח מחוטב.</p>
+    <div class="promo-links">
+      <a class="promo-btn" href="${MAIN_SITE}#offer">על הליווי האישי</a>
+      <a class="promo-btn alt" href="${MAIN_SITE}#products">לספרי המתכונים</a>
+    </div>
+  </section>
 </main>`;
   return page({
     title: '',
