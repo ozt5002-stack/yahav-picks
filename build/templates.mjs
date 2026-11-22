@@ -20,7 +20,7 @@ const catOf = (name) => CATEGORIES.find((c) => c.name === name);
 const DISCLOSURE_SHORT = 'הקישורים כאן הם קישורי שותפים. אם תקני דרכם, ייתכן שאקבל עמלה.';
 const DISCLOSURE_FULL = 'חלק מהקישורים באתר הם קישורי שותפים של AliExpress. אם תקני דרכם, ייתכן שאקבל עמלה.';
 
-const ICONS = `<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+const ICONS = `<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
 <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 9.2c.2 2.6 2.6 5 5.4 5.4l1.1-1.3-1.8-.9-.8.8c-1-.4-1.9-1.3-2.3-2.3l.8-.8-.9-1.8z" fill="currentColor"/></symbol>
 <symbol id="i-out" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8M17 14v5H5V7h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -30,6 +30,11 @@ const ICONS = `<svg width="0" height="0" style="position:absolute" aria-hidden="
 <symbol id="i-back" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>`;
 
+// GitHub Pages cannot send response headers, so the Content Security Policy goes in a meta tag (OWASP A02).
+// Everything is served from this site: no outside scripts, styles, fonts or images, and no inline code.
+// (frame-ancestors only works as a header, so framing is not blocked here.)
+const CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests";
+
 function page({ title, description, path, ogImage, body, ctx, extraHead = '' }) {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | ${OWNER}`;
   return `<!doctype html>
@@ -37,6 +42,7 @@ function page({ title, description, path, ogImage, body, ctx, extraHead = '' }) 
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="${CSP}">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${esc(abs(path))}">
