@@ -251,3 +251,6 @@ h1, h2, h3 { text-wrap: balance; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+/* Icon sprite: kept out of the layout (was an inline style; the CSP allows no inline styles). */
+.sprite{position:absolute}
